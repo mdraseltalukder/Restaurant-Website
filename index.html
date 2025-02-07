@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/restaurantfavicon1.webp" type="image/x-icon" />
+    <title>RESTAURANT WEBSITE</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="m-0 p-0 text-center">
+   
+    <style>
+      .header-sec {
+        background-image: url(./img/bg2.png);
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+      }
+      .slider-sec {
+        background-image: url(./img/bg3.png);
+        width: 100%;
+        height: 70vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .feature-sec {
+        background: url(img/bg4.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        background-position: top;
+        backdrop-filter: blur(1rem);
+      }
+      .menu p {
+        position: relative;
+      }
+      .menu p::before {
+        content: "";
+        height: 4px;
+        width: 20%;
+        background: #f9c56a;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .borderline {
+        position: relative;
+      }
+      .borderline::before {
+        content: "";
+        height: 3px;
+        width: 20%;
+        background: #f9c56a;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .menu-links a {
+        position: relative;
+      }
+      .menu-links a::before {
+        content: "";
+        height: 0;
+        width: 0;
+        background: #f9c56a;
+        position: absolute;
+        bottom: -2px;
+        display: none;
+      }
+      .menu-links a:hover::before {
+        height: 3px;
+        width: 100%;
+        display: flex;
+        animation: menu-links-a 0.5s linear;
+      }
+      @keyframes menu-links-a {
+        0% {
+          width: 0%;
+        }
+
+        50%,
+        100% {
+          width: 100%;
+        }
+      }
+      .slider-bg {
+        background-image: url(img/bg5.png);
+        height: 50vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .scroll-smooth {
+        scrollbar-width: none;
+      }
+      footer {
+        background-image: url(img/bg6.png);
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .reach-icon a:hover {
+        background-color: #f9c56a;
+        color: black;
+      }
+      .footer {
+        display: grid;
+        /* grid-template-columns: repeat(3,1fr); */
+        /* grid-template-columns: 12fr,6fr,6fr; */
+      }
+      @media (max-width: 500px) {
+        h2 {
+          font-size: 20px !important;
+        }
+        p {
+          font-size: 16px !important;
+        }
+        a {
+          font-size: 16px !important;
+        }
+        footer {
+          height: 110vh;
+          .footer {
+            padding-bottom: 20px;
+          }
+        }
+      }
+      @media (min-width: 1024px) {
+        .slider-bg {
+          height: 60vh;
+        }
+        footer {
+          height: 80vh;
+        }
+
+        .about {
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+      }
+      @media (min-width: 1280px) {
+        .about {
+          grid-column-start: 1;
+          grid-column-end: 2;
+        }
+        .footer {
+          padding-bottom: 30px;
+        }
+        footer {
+          height: 50vh;
+        }
+      }
+    </style>
+    <!-- header-sec start  -->
+    <header class="header-sec  w-full m-auto relative overflow-hidden">
+      <!-- navbar -->
+      <div class="bg-black bg-opacity-40 fixed z-40  w-full">
+        <div
+          class="nav flex items-center max-w-[1340px] m-auto justify-between px-7 py-5 lg:py-9  relative"
+          data-aos="zoom-in-down"
+        >
+          <a href="./" class="cursor-pointer text-white text-h2 font-Josefin" 
+           > Tasty Delights
+          </a>
+          <!-- mobile menu -->
+          <a href=""
+            ><i class="fa-solid fa-bars text-[20px] text-white hidden"></i
+          ></a>
+          <!-- mobile-menu -->
+          <div
+            class="mobile-menu flex flex-col items-start justify-center text-white font-Raleway absolute top-[100%] left-[-100%] gap-7 bg-black w-full bg-opacity-40 pb-7 pl-7  xl:hidden text-[20px] pt-10"
+            id="mobile-menu"
+          >
+          <a class="font-extrabold 
+          text-[#f9c56a]"
+           href="index.html">HOME▾ </a>
+          <!-- <a href="shop.html">SHOP▾</a> -->
+          <a href="contact.html">CONTACT▾</a>
+          <a href="#">MENU▾</a>
+          <a href="#">RESERVATION▾</a>
+          <a href="#">RECIPE▾</a>
+          <a href="#">BLOG▾</a>
+          <a href="about.html">ABOUT▾</a>
+
+            <div>
+              <a
+                ><i
+                  class="fa-solid fa-cart-shopping text-white text-[16px] cursor-pointer hover:text-[#f9c56a] duration-500"
+                ></i
+              ></a>
+            </div>
+          </div>
+          <div class="flex items-center justify-end">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="open-menu xl:hidden w-[35px] text-white"
+            id="open-menu"
+          >
+            <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="close-menu hidden xl:hidden w-[35px] text-white"
+            id="close-menu"
+          >
+            <path
+              d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"
+            ></path>
+          </svg>
+          </div>
+         
+          <!-- menu -->
+
+          <div
+            class="nav-items text-white text-a lg:text-[20px] items-center justify-between gap-8  hidden xl:flex"
+            id="menu"
+
+          >
+            <a href="index.html">HOME▾ </a>
+            <!-- <a href="shop.html">SHOP▾</a> -->
+            <a href="contact.html">CONTACT▾</a>
+            <a href="#">MENU▾</a>
+            <a href="#">RESERVATION▾</a>
+            <a href="#">RECIPE▾</a>
+            <a href="#">BLOG▾</a>
+            <a href="about.html">ABOUT▾</a>
+
+            <!-- <div>
+
+              <a
+                ><i
+                  class="fa-solid fa-cart-shopping text-white text-[16px] cursor-pointer hover:text-[#f9c56a] duration-500"
+                ></i
+              ></a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- header -->
+      <div
+        class="header flex flex-col items-center gap-7 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[1340px]"
+       
+      >
+        <img src="img/logo.png" alt=" logo image" class="inline-block" />
+        <h1
+          class="font-Raleway font-extrabold text-white text-h1 lg:text-[68px]"
+        >
+          DELICIOUS&nbspFOOD
+        </h1>
+        <h2 class="font-Raleway  text-[#bdbdbd] text-[24px] ">
+          Tomato&nbspis&nbspa&nbspdelitious&nbsprestaurant&nbspwebsite&nbsptemplate
+        </h2>
+      </div>
+      <div class="absolute bottom-5 left-1/2 -translate-x-1/2">
+        <a href="#restaurant">
+          <img src="img/arrow-down.png" alt="" />
+        </a>
+      </div>
+    </header>
+    <!-- header-sec end  -->
+    <!-- restaurant start -->
+    <main>
+    <section
+      id="restaurant"
+      class="restaurant-sec my-20 flex flex-col gap-14 max-w-[1340px] m-auto overflow-hidden"
+    >
+      <div class="flex flex-col items-center gap-3">
+        <h2 class="text-h2 lg:text-[36px] font-semibold font-Raleway">
+          THE RESTAURANT
+        </h2>
+        <small
+          class="text-[22px] font-Josefin font-[400] text-[#777] leading-1"
+        >
+          A little about us and a breif history of how we started.
+        </small>
+      </div>
+
+      <div class="restaurant px-5 flex flex-col gap-7 lg:flex-row">
+        <div
+          class="restaurant-img flex lg:flex-col gap-2 lg:w-1/2 object-cover items-start lg:justify-start justify-center w-full "
+          data-aos="fade-right"
+        >
+          <img src="img/thumb2.png" class="w-full" alt="" />
+          <img src="img/thumb3.png" class="w-full" alt="" />
+        </div>
+        <div
+          class="restaurant-info flex flex-col content-start justify-start gap-7 text-left"
+          data-aos="fade-left"
+        >
+          <small class="text-[#828281] text-[22px]"
+            >Cras ut viverra eros. Phasellus sollicitudin sapien id luctus
+            tempor. Sed hend rerit inter dum sagittis. Donec nunc lacus, dapibus
+            nec interdum eget, ultrices eget justo. Nam purus lacus, efficitur
+            eget laoreet sed, finibus nec neque. Cras eget enim in diam dapibus
+            sagittis. In massa est, dignissim in libero ac, fringilla ornare mi.
+            Etiam interdum ligula purus.</small
+          >
+          <small class="text-[#828281] text-[22px] font-Josefin"
+            >Ultrices eget justo. Nam purus lacus, efficitur eget laoreet sed,
+            finibus nec neque. Cras eget enim in diam dapibus sagittis. In massa
+            est, dignissim in libero ac, fringilla ornare.</small
+          >
+          <img src="img/signature.png" alt="signature image" class="w-64" />
+        </div>
+      </div>
+    </section>
+    <!-- restaurant end -->
+  
+    <!-- reservation-sec start -->
+    <section class="reservation-sec max-w-[1340px] mx-auto"
+    data-aos="fade-up">
+      <div class="mt-20 pb-20">
+        <h2 class="text-h2 text-black font-Raleway font-extrabold">
+          RESERVATIONS
+        </h2>
+        <small class="font-Josefin text-[#777] text-[22px]"
+          >Book a table online.
+          <small
+            class="font-Josefin text-[#777] border-b-4 pb-4 border-[#f9c56a] text-[22px]"
+          >
+            Leads will
+          </small>
+          reach in your email.</small
+        >
+      </div>
+      <form
+      action="https://formspree.io/f/mldglbkp"
+      method="POST"
+        class="mb-20 text-left flex flex-col items-center content-start"
+      >
+        <fieldset
+          class="border border-gray-200 py-10 mx-3 flex flex-col items-center content-start w-full"
+        >
+          <div
+            class="flex flex-col content-start lg:grid lg:grid-cols-2 xl:grid-cols-3 gap-7 w-full"
+          >
+            <div class="mx-10">
+              <label for="date"  class="block mb-2 font-Raleway text-[18px]"
+                >Date</label
+              >
+              <div class="relative hover:border-none">
+                <input
+                  class="pl-4 pr-10 font-Josefin focus:border-none"
+                type="date"
+                  required
+                  id="date"
+                  placeholder="pick a date"
+                />
+              
+              </div>
+            </div>
+            <div class="mx-10">
+              <label for="name" class="block mb-2 font-Raleway text-[18px]"
+                >Your Name</label
+              >
+              <div class="relative">
+                <input
+                  class="pl-4 pr-10 hover:border-none font-Josefin"
+                  type="text"
+                  required
+                  id="name"
+                  placeholder="Full Name"
+                />
+                <span class="absolute right-3 top-1/2 -translate-y-1/2">
+                  <i class="bx bx-edit"></i>
+                </span>
+              </div>
+            </div>
+            <div class="mx-10">
+              <label for="time" class="block mb-2 font-Raleway text-[18px]"
+                >Time</label
+              >
+              <div class="relative">
+                <input
+                  class="pl-4 pr-10 hover:border-none font-Josefin"
+                  type="time"
+                  required
+                  id="time"
+                  placeholder="Pick a time"
+                />
+              
+              </div>
+            </div>
+            <div class="mx-10">
+              <label for="email" class="block mb-2 font-Raleway text-[18px]"
+                >Email Address</label
+              >
+              <div class="relative">
+                <input
+                  class="pl-4 pr-10 hover:border-none font-Josefin"
+                  type="email"
+                  required
+                  id="email"
+                  placeholder="Your Email ID"
+                />
+                <span class="absolute right-3 top-1/2 -translate-y-1/2">
+                  <i class="bx bx-envelope"></i>
+                </span>
+              </div>
+            </div>
+            <div class="mx-10">
+              <label for="number" class="block mb-2 font-Raleway text-[18px]"
+                >Guests</label
+              >
+              <div class="relative">
+                <input
+                  class="pl-4 pr-10 hover:border-none font-Josefin"
+                  type="number"
+                  required
+                  id="number"
+                  placeholder="How many of You"
+                />
+                <span class="absolute right-3 top-1/2 -translate-y-1/2">
+                  <i class="bx bxs-user"></i>
+                </span>
+              </div>
+            </div>
+            <div class="mx-10">
+              <label for="phone" class="block mb-2 font-Raleway text-[18px]"
+                >Phone Number</label
+              >
+              <div class="relative">
+                <input
+                  class="pl-4 pr-10 hover:border-none font-Josefin"
+                  type="tel"
+                  required
+                  id="phone"
+                  placeholder="Enter your Phone Number"
+                />
+                <span class="absolute right-3 top-1/2 -translate-y-1/2">
+                  <i class="bx bxs-phone"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <button
+            class="bg-[#f9c56a] text-black font-Raleway font-bold text-[18px] py-3 px-10 m-auto mt-10 text-center"
+          >
+            MAKE&nbspRESERVATION
+          </button>
+        </fieldset>
+        <p
+          class="text-[22px] font-Josefin text-[#828281] bg-[#fafafa] py-7 px-10 mx-auto"
+        >
+          You can also call:
+          <a class="font-semibold" href=""> +1 224 6787 004</a> tel to make a
+          reservation.
+        </p>
+      </form>
+    </section>
+    <!-- reservation-sec end -->
+    <!-- feature start  -->
+    <section class="feature-sec">
+      <div class="flex flex-col gap-3 py-16"
+      data-aos="fade-up">
+        <h2 class="text-h2 text-white font-Raleway font-semibold">
+          OUR FEATURES
+        </h2>
+        <small class="text-[22px] text-white font-Josefin"
+          >Little things
+          <small
+            class="text-[22px] text-white font-Josefin border-b-4 border-[#f9c56a] pb-5"
+            >make us</small
+          >
+          best in town</small
+        >
+      </div>
+      <div
+        class="flex flex-col gap-3 lg:flex-row max-w-[1340px] m-auto lg:pb-12"
+         data-aos="fade-up"
+      >
+        <div
+          class="feature-items bg-white mx-3 my-3 flex flex-col items-start justify-start gap-7 pb-5"
+        >
+          <img
+            class="bg-cover w-full bg-no-repeat"
+            src="img/thumb5.png"
+            alt=""
+          />
+          <div class="flex gap-2 px-7">
+            <h3
+              class="font-Raleway text-h3 text-black font-semibold border-b-4 border-[#f9c56a] pb-5"
+            >
+              SERVING
+            </h3>
+            <h3 class="font-Raleway text-h3 text-black font-semibold">
+              WITH LOVE
+            </h3>
+          </div>
+          <p class="font-Josefin text-[#828281] text-[22px] text-left px-7">
+            Aenean suscipit vehicula purus quis iaculis. Aliquam nec leo nisi.
+            Nam urna arcu, maximus eget ex nec, consequat pellentesque enim.
+            Aliquam tempor fringilla odio, vel ullamcorper turpis varius eu.
+          </p>
+        </div>
+        <div
+          class="feature-items bg-white mx-3 my-3 flex flex-col items-start justify-start gap-7 pb-5"
+        >
+          <img
+            class="bg-cover w-full bg-no-repeat"
+            src="img/thumb6.png"
+            alt=""
+          />
+          <div class="flex gap-2 px-7">
+            <h3
+              class="font-Raleway text-h3 text-black font-semibold border-b-4 border-[#f9c56a] pb-5"
+            >
+              SERVING
+            </h3>
+            <h3 class="font-Raleway text-h3 text-black font-semibold">
+              WITH LOVE
+            </h3>
+          </div>
+          <p class="font-Josefin text-[#828281] text-[22px] text-left px-7">
+            Aenean suscipit vehicula purus quis iaculis. Aliquam nec leo nisi.
+            Nam urna arcu, maximus eget ex nec, consequat pellentesque enim.
+            Aliquam tempor fringilla odio, vel ullamcorper turpis varius eu.
+          </p>
+        </div>
+        <div
+          class="feature-items bg-white mx-3 my-3 flex flex-col items-start justify-start gap-7 pb-5 mb-20 lg:mb-auto"
+        >
+          <img
+            class="bg-cover w-full bg-no-repeat"
+            src="img/thumb7.png"
+            alt=""
+          />
+          <div class="flex gap-2 px-7">
+            <h3
+              class="font-Raleway text-h3 text-black font-semibold border-b-4 border-[#f9c56a] pb-5"
+            >
+              SERVING
+            </h3>
+            <h3 class="font-Raleway text-h3 text-black font-semibold">
+              WITH LOVE
+            </h3>
+          </div>
+          <p class="font-Josefin text-[#828281] text-[22px] text-left px-7">
+            Aenean suscipit vehicula purus quis iaculis. Aliquam nec leo nisi.
+            Nam urna arcu, maximus eget ex nec, consequat pellentesque enim.
+            Aliquam tempor fringilla odio, vel ullamcorper turpis varius eu.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- feature end -->
+    <!-- menu start -->
+    <section class="menu-sec max-w-[1340px] mx-auto flex flex-col gap-10 mb-20"
+    data-aos="fade-up">
+      <div
+        class="menu flex flex-col items-center justify-centergap-7 mt-20 mb-10"
+      >
+        <h2 class="text-h2 text-black font-Raleway font-semibold">OUR MENU</h2>
+        <p class="text-[20px] text-[#777] font-Josefin">
+          These fine folks trusted the award winning restaurant.
+        </p>
+      </div>
+      <div class="max-w-[1024px] mx-auto">
+      <!-- <div
+        class="menu-links grid grid-cols-3 content-start lg:flex items-start justify-start gap-9 lg:gap-16 "
+      >
+        <a href="">ALL</a>
+        <a href="">STARTERS</a>
+        <a href="">BREAKFAST</a>
+        <a href="">LUNCH</a>
+        <a href="">DINNER </a>
+        <a href="">DESSERTS </a>
+      </div> -->
+    </div>
+      <div class="flex flex-col gap-10 mx-5 lg:grid lg:grid-cols-2">
+        <div class="menu-info flex flex-col items-srart">
+          <div
+            class="menu-text flex items-center justify-between relative z-20"
+          >
+            <h3 class="text-h4 font-Raleway font-semibold bg-white">
+              ENGLISH ASPARAGUS
+            </h3>
+            <span class="text-h4 font-Raleway font-semibold bg-white"
+              >$14.95</span
+            >
+            <div
+              class="border-t-2 border-dotted border-black w-full absolute left-0 top-1/2 -translate-y-1/2 -z-10"
+            ></div>
+          </div>
+          <p class="text-[18px] font-Josefin text-[#828281] text-left">
+            pellentesque enim. Aliquam tempor
+          </p>
+        </div>
+        <div class="menu-info flex flex-col items-srart">
+          <div
+            class="menu-text flex items-center justify-between relative z-20"
+          >
+            <h3 class="text-h4 font-Raleway font-semibold bg-white">
+              ENGLISH ASPARAGUS
+            </h3>
+            <span class="text-h4 font-Raleway font-semibold bg-white"
+              >$14.95</span
+            >
+            <div
+              class="border-t-2 border-dotted border-black w-full absolute left-0 top-1/2 -translate-y-1/2 -z-10"
+            ></div>
+          </div>
+          <p class="text-[18px] font-Josefin text-[#828281] text-left">
+            pellentesque enim. Aliquam tempor
+          </p>
+        </div>
+        <div class="menu-info flex flex-col items-srart">
+          <div
+            class="menu-text flex items-center justify-between relative z-20"
+          >
+            <h3 class="text-h4 font-Raleway font-semibold bg-white">
+              ENGLISH ASPARAGUS
+            </h3>
+            <span class="text-h4 font-Raleway font-semibold bg-white"
+              >$14.95</span
+            >
+            <div
+              class="border-t-2 border-dotted border-black w-full absolute left-0 top-1/2 -translate-y-1/2 -z-10"
+            ></div>
+          </div>
+          <p class="text-[18px] font-Josefin text-[#828281] text-left">
+            pellentesque enim. Aliquam tempor
+          </p>
+        </div>
+        <div class="menu-info flex flex-col items-srart">
+          <div
+            class="menu-text flex items-center justify-between relative z-20"
+          >
+            <h3 class="text-h4 font-Raleway font-semibold bg-white">
+              ENGLISH ASPARAGUS
+            </h3>
+            <span class="text-h4 font-Raleway font-semibold bg-white"
+              >$14.95</span
+            >
+            <div
+              class="border-t-2 border-dotted border-black w-full absolute left-0 top-1/2 -translate-y-1/2 -z-10"
+            ></div>
+          </div>
+          <p class="text-[18px] font-Josefin text-[#828281] text-left">
+            pellentesque enim. Aliquam tempor
+          </p>
+        </div>
+        <div class="menu-info flex flex-col items-srart">
+          <div
+            class="menu-text flex items-center justify-between relative z-20"
+          >
+            <h3 class="text-h4 font-Raleway font-semibold bg-white">
+              ENGLISH ASPARAGUS
+            </h3>
+            <span class="text-h4 font-Raleway font-semibold bg-white"
+              >$14.95</span
+            >
+            <div
+              class="border-t-2 border-dotted border-black w-full absolute left-0 top-1/2 -translate-y-1/2 -z-10"
+            ></div>
+          </div>
+          <p class="text-[18px] font-Josefin text-[#828281] text-left">
+            pellentesque enim. Aliquam tempor
+          </p>
+        </div>
+        <div class="menu-info flex flex-col items-srart">
+          <div
+            class="menu-text flex items-center justify-between relative z-20"
+          >
+            <h3 class="text-h4 font-Raleway font-semibold bg-white">
+              ENGLISH ASPARAGUS
+            </h3>
+            <span class="text-h4 font-Raleway font-semibold bg-white"
+              >$14.95</span
+            >
+            <div
+              class="border-t-2 border-dotted border-black w-full absolute left-0 top-1/2 -translate-y-1/2 -z-10"
+            ></div>
+          </div>
+          <p class="text-[18px] font-Josefin text-[#828281] text-left">
+            pellentesque enim. Aliquam tempor
+          </p>
+        </div>
+        <div class="menu-info flex flex-col items-srart">
+          <div
+            class="menu-text flex items-center justify-between relative z-20"
+          >
+            <h3 class="text-h4 font-Raleway font-semibold bg-white">
+              ENGLISH ASPARAGUS
+            </h3>
+            <span class="text-h4 font-Raleway font-semibold bg-white"
+              >$14.95</span
+            >
+            <div
+              class="border-t-2 border-dotted border-black w-full absolute left-0 top-1/2 -translate-y-1/2 -z-10"
+            ></div>
+          </div>
+          <p class="text-[18px] font-Josefin text-[#828281] text-left">
+            pellentesque enim. Aliquam tempor
+          </p>
+        </div>
+        <div class="menu-info flex flex-col items-srart">
+          <div
+            class="menu-text flex items-center justify-between relative z-20"
+          >
+            <h3 class="text-h4 font-Raleway font-semibold bg-white">
+              ENGLISH ASPARAGUS
+            </h3>
+            <span class="text-h4 font-Raleway font-semibold bg-white"
+              >$14.95</span
+            >
+            <div
+              class="border-t-2 border-dotted border-black w-full absolute left-0 top-1/2 -translate-y-1/2 -z-10"
+            ></div>
+          </div>
+          <p class="text-[18px] font-Josefin text-[#828281] text-left">
+            pellentesque enim. Aliquam tempor
+          </p>
+        </div>
+        <div class="menu-info flex flex-col items-srart">
+          <div
+            class="menu-text flex items-center justify-between relative z-20"
+          >
+            <h3 class="text-h4 font-Raleway font-semibold bg-white">
+              ENGLISH ASPARAGUS
+            </h3>
+            <span class="text-h4 font-Raleway font-semibold bg-white"
+              >$14.95</span
+            >
+            <div
+              class="border-t-2 border-dotted border-black w-full absolute left-0 top-1/2 -translate-y-1/2 -z-10"
+            ></div>
+          </div>
+          <p class="text-[18px] font-Josefin text-[#828281] text-left">
+            pellentesque enim. Aliquam tempor
+          </p>
+        </div>
+        <div class="menu-info flex flex-col items-srart">
+          <div
+            class="menu-text flex items-center justify-between relative z-20"
+          >
+            <h3 class="text-h4 font-Raleway font-semibold bg-white">
+              ENGLISH ASPARAGUS
+            </h3>
+            <span class="text-h4 font-Raleway font-semibold bg-white"
+              >$14.95</span
+            >
+            <div
+              class="border-t-2 border-dotted border-black w-full absolute left-0 top-1/2 -translate-y-1/2 -z-10"
+            ></div>
+          </div>
+          <p class="text-[18px] font-Josefin text-[#828281] text-left">
+            pellentesque enim. Aliquam tempor
+          </p>
+        </div>
+      </div>
+      <button
+        class="bg-[#f9c56a] text-black font-Raleway font-bold text-[18px] py-3 px-10 m-auto text-center"
+      >
+        EXPLORE OUR MENU
+      </button>
+    </section>
+    <!-- menu end -->
+    <!-- trusted sec start  -->
+    <section class="trusted-sec flex flex-col gap-10">
+      <div class="max-w-[1340px] mx-auto flex flex-col items-center gap-4">
+        <h2
+          class="text-h2 lg:text-h1 font-Raleway font-semibold lg:font-extrabold"
+        >
+          TRUSTED BY
+        </h2>
+        <small
+          class="borderline text-[#777] text-[22px] font-Josefin font-[400]"
+          >These fine folks trusted tha award winning restaurant</small
+        >
+      </div>
+
+      <div
+        class="flex items-center justify-between gap-7 content-between max-w-[1340px] lg:mx-auto lg:gap-12
+        overflow-x-scroll scroll-smooth "
+      >
+        <img src="img/zomato.png" alt="" />
+        <img src="img/foodsquare.png" alt="" />
+        <img src="img/opentable.png" alt="" />
+        <img src="img/tripadvisor.png" alt="" />
+        <img src="img/zomato.png" alt="" />
+      </div>
+
+      <!-- slider-start -->
+      <div class="relative w-full glide-08">
+        <!-- Slides -->
+        <div
+          class="slider-bg lg:h-[60vh] overflow-hidden text-center rounded shadow-2xl shadow-slate-200 text-slate-500"
+          data-glide-el="track"
+        >
+          <ul
+          class="relative w-full overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
+          <li>
+            <div class="w-full">
+              <!-- Start Testimonial -->
+              <div class="overflow-hidden">
+                <div class="relative p-6">
+                  <figure class="relative z-10">
+                    <blockquote
+                      class="leading-loose flex flex-col items-center gap-7 max-w-[1024px] mx-auto overflow-hidden mt-10"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="h-16 left-6 top-6"
+                        viewBox="0 0 17 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.79187 3.83333C2.66179 3.83333 2.53696 3.85316 2.41271 3.87125C2.45296 3.73591 2.49437 3.59825 2.56087 3.47458C2.62737 3.29491 2.73121 3.13916 2.83446 2.98225C2.92079 2.8125 3.07304 2.69758 3.18504 2.55233C3.30229 2.41116 3.46212 2.31725 3.58871 2.2C3.71296 2.0775 3.87571 2.01625 4.00521 1.92991C4.14054 1.85233 4.25837 1.76658 4.38437 1.72575L4.69879 1.59625L4.97529 1.48133L4.69237 0.35083L4.34412 0.43483C4.23271 0.46283 4.09679 0.495496 3.94221 0.53458C3.78412 0.563746 3.61554 0.643663 3.42771 0.71658C3.24221 0.799413 3.02754 0.855413 2.82804 0.988413C2.62737 1.11558 2.39579 1.22175 2.19162 1.39208C1.99387 1.56766 1.75529 1.71991 1.57912 1.94333C1.38662 2.15216 1.19646 2.3715 1.04887 2.62116C0.877957 2.85916 0.761873 3.1205 0.639373 3.37891C0.52854 3.63733 0.43929 3.90158 0.366373 4.15825C0.228123 4.67275 0.16629 5.16158 0.142373 5.57983C0.12254 5.99866 0.134207 6.34691 0.158707 6.59891C0.167457 6.71791 0.18379 6.83341 0.195457 6.91333L0.21004 7.01133L0.225207 7.00783C0.328959 7.49248 0.567801 7.93786 0.914102 8.29243C1.2604 8.64701 1.70001 8.89631 2.18208 9.01148C2.66415 9.12665 3.16897 9.10299 3.63815 8.94323C4.10733 8.78348 4.52169 8.49416 4.83331 8.10874C5.14493 7.72333 5.34107 7.25757 5.39903 6.76534C5.457 6.27311 5.37443 5.77452 5.16087 5.32726C4.94731 4.88 4.61149 4.50233 4.19225 4.23796C3.77302 3.97358 3.28751 3.8333 2.79187 3.83333V3.83333ZM9.20854 3.83333C9.07846 3.83333 8.95362 3.85316 8.82937 3.87125C8.86962 3.73591 8.91104 3.59825 8.97754 3.47458C9.04404 3.29491 9.14787 3.13916 9.25112 2.98225C9.33746 2.8125 9.48971 2.69758 9.60171 2.55233C9.71896 2.41116 9.87879 2.31725 10.0054 2.2C10.1296 2.0775 10.2924 2.01625 10.4219 1.92991C10.5572 1.85233 10.675 1.76658 10.801 1.72575L11.1155 1.59625L11.392 1.48133L11.109 0.35083L10.7608 0.43483C10.6494 0.46283 10.5135 0.495496 10.3589 0.53458C10.2008 0.563746 10.0322 0.643663 9.84437 0.71658C9.65946 0.799997 9.44421 0.855413 9.24471 0.988997C9.04404 1.11616 8.81246 1.22233 8.60829 1.39266C8.41054 1.56825 8.17196 1.7205 7.99579 1.94333C7.80329 2.15216 7.61312 2.3715 7.46554 2.62116C7.29462 2.85916 7.17854 3.1205 7.05604 3.37891C6.94521 3.63733 6.85596 3.90158 6.78304 4.15825C6.64479 4.67275 6.58296 5.16158 6.55904 5.57983C6.53921 5.99866 6.55087 6.34691 6.57537 6.59891C6.58412 6.71791 6.60046 6.83341 6.61212 6.91333L6.62671 7.01133L6.64187 7.00783C6.74563 7.49248 6.98447 7.93786 7.33077 8.29243C7.67707 8.64701 8.11668 8.89631 8.59875 9.01148C9.08081 9.12665 9.58563 9.10299 10.0548 8.94323C10.524 8.78348 10.9384 8.49416 11.25 8.10874C11.5616 7.72333 11.7577 7.25757 11.8157 6.76534C11.8737 6.27311 11.7911 5.77452 11.5775 5.32726C11.364 4.88 11.0282 4.50233 10.6089 4.23796C10.1897 3.97358 9.70417 3.8333 9.20854 3.83333V3.83333Z"
+                          class="fill-emerald-50"
+                        />
+                      </svg>
+                      <p class="text-white text-[19px] lg:text-[31px] font-Josefin">
+                        The world’s a big, big stage for this notorious deli smack
+                        in the middle of the theatre district, infamously famous for
+                        its over-the-top corned beef and pastrami sandwiches,
+                        chopped liver, blintzes, celebrities, salami, smoked fish
+                        and New York’s finest cheesecake.
+                      </p>
+                      <div class="flex items-center">
+                        <p
+                          class="text-white text-[19px] font-[700] font-Josefin lg:text-[31px]"
+                        >
+                          Anthony Reed,
+                        </p>
+                        <span
+                          class="text-white text-[19px] font-Josefin lg:text-[31px]"
+                          >New York</span
+                        >
+                      </div>
+                    </blockquote>
+                  </figure>
+                </div>
+              </div>
+              <!-- End Testimonial -->
+            </div>
+          </li>
+          <li>
+            <div class="w-full">
+              <!-- Start Testimonial -->
+              <div class="overflow-hidden">
+                <div class="relative p-6">
+                  <figure class="relative z-10">
+                    <blockquote
+                      class="leading-loose flex flex-col items-center gap-7 max-w-[1024px] mx-auto overflow-hidden mt-10"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="h-16 left-6 top-6"
+                        viewBox="0 0 17 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.79187 3.83333C2.66179 3.83333 2.53696 3.85316 2.41271 3.87125C2.45296 3.73591 2.49437 3.59825 2.56087 3.47458C2.62737 3.29491 2.73121 3.13916 2.83446 2.98225C2.92079 2.8125 3.07304 2.69758 3.18504 2.55233C3.30229 2.41116 3.46212 2.31725 3.58871 2.2C3.71296 2.0775 3.87571 2.01625 4.00521 1.92991C4.14054 1.85233 4.25837 1.76658 4.38437 1.72575L4.69879 1.59625L4.97529 1.48133L4.69237 0.35083L4.34412 0.43483C4.23271 0.46283 4.09679 0.495496 3.94221 0.53458C3.78412 0.563746 3.61554 0.643663 3.42771 0.71658C3.24221 0.799413 3.02754 0.855413 2.82804 0.988413C2.62737 1.11558 2.39579 1.22175 2.19162 1.39208C1.99387 1.56766 1.75529 1.71991 1.57912 1.94333C1.38662 2.15216 1.19646 2.3715 1.04887 2.62116C0.877957 2.85916 0.761873 3.1205 0.639373 3.37891C0.52854 3.63733 0.43929 3.90158 0.366373 4.15825C0.228123 4.67275 0.16629 5.16158 0.142373 5.57983C0.12254 5.99866 0.134207 6.34691 0.158707 6.59891C0.167457 6.71791 0.18379 6.83341 0.195457 6.91333L0.21004 7.01133L0.225207 7.00783C0.328959 7.49248 0.567801 7.93786 0.914102 8.29243C1.2604 8.64701 1.70001 8.89631 2.18208 9.01148C2.66415 9.12665 3.16897 9.10299 3.63815 8.94323C4.10733 8.78348 4.52169 8.49416 4.83331 8.10874C5.14493 7.72333 5.34107 7.25757 5.39903 6.76534C5.457 6.27311 5.37443 5.77452 5.16087 5.32726C4.94731 4.88 4.61149 4.50233 4.19225 4.23796C3.77302 3.97358 3.28751 3.8333 2.79187 3.83333V3.83333ZM9.20854 3.83333C9.07846 3.83333 8.95362 3.85316 8.82937 3.87125C8.86962 3.73591 8.91104 3.59825 8.97754 3.47458C9.04404 3.29491 9.14787 3.13916 9.25112 2.98225C9.33746 2.8125 9.48971 2.69758 9.60171 2.55233C9.71896 2.41116 9.87879 2.31725 10.0054 2.2C10.1296 2.0775 10.2924 2.01625 10.4219 1.92991C10.5572 1.85233 10.675 1.76658 10.801 1.72575L11.1155 1.59625L11.392 1.48133L11.109 0.35083L10.7608 0.43483C10.6494 0.46283 10.5135 0.495496 10.3589 0.53458C10.2008 0.563746 10.0322 0.643663 9.84437 0.71658C9.65946 0.799997 9.44421 0.855413 9.24471 0.988997C9.04404 1.11616 8.81246 1.22233 8.60829 1.39266C8.41054 1.56825 8.17196 1.7205 7.99579 1.94333C7.80329 2.15216 7.61312 2.3715 7.46554 2.62116C7.29462 2.85916 7.17854 3.1205 7.05604 3.37891C6.94521 3.63733 6.85596 3.90158 6.78304 4.15825C6.64479 4.67275 6.58296 5.16158 6.55904 5.57983C6.53921 5.99866 6.55087 6.34691 6.57537 6.59891C6.58412 6.71791 6.60046 6.83341 6.61212 6.91333L6.62671 7.01133L6.64187 7.00783C6.74563 7.49248 6.98447 7.93786 7.33077 8.29243C7.67707 8.64701 8.11668 8.89631 8.59875 9.01148C9.08081 9.12665 9.58563 9.10299 10.0548 8.94323C10.524 8.78348 10.9384 8.49416 11.25 8.10874C11.5616 7.72333 11.7577 7.25757 11.8157 6.76534C11.8737 6.27311 11.7911 5.77452 11.5775 5.32726C11.364 4.88 11.0282 4.50233 10.6089 4.23796C10.1897 3.97358 9.70417 3.8333 9.20854 3.83333V3.83333Z"
+                          class="fill-emerald-50"
+                        />
+                      </svg>
+                      <p class="text-white text-[19px] font-Josefin lg:text-[31px]">
+                        The world’s a big, big stage for this notorious deli smack
+                        in the middle of the theatre district, infamously famous for
+                        its over-the-top corned beef and pastrami sandwiches,
+                        chopped liver, blintzes, celebrities, salami, smoked fish
+                        and New York’s finest cheesecake.
+                      </p>
+                      <div class="flex items-center justify-center">
+                        <p
+                          class="text-white text-[19px] font-[700] font-Josefin lg:text-[31px]"
+                        >
+                          Anthony Reed,
+                        </p>
+                        <span
+                          class="text-white text-[19px] font-Josefin lg:text-[31px]"
+                          >New York</span
+                        >
+                      </div>
+                    </blockquote>
+                  </figure>
+                </div>
+              </div>
+              <!-- End Testimonial -->
+            </div>
+          </li>
+          <li>
+            <div class="w-full">
+              <!-- Start Testimonial -->
+              <div class="overflow-hidden">
+                <div class="relative p-6">
+                  <figure class="relative z-10">
+                    <blockquote
+                      class="leading-loose flex flex-col items-center gap-7 max-w-[1024px] mx-auto overflow-hidden mt-10"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="h-16 left-6 top-6"
+                        viewBox="0 0 17 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.79187 3.83333C2.66179 3.83333 2.53696 3.85316 2.41271 3.87125C2.45296 3.73591 2.49437 3.59825 2.56087 3.47458C2.62737 3.29491 2.73121 3.13916 2.83446 2.98225C2.92079 2.8125 3.07304 2.69758 3.18504 2.55233C3.30229 2.41116 3.46212 2.31725 3.58871 2.2C3.71296 2.0775 3.87571 2.01625 4.00521 1.92991C4.14054 1.85233 4.25837 1.76658 4.38437 1.72575L4.69879 1.59625L4.97529 1.48133L4.69237 0.35083L4.34412 0.43483C4.23271 0.46283 4.09679 0.495496 3.94221 0.53458C3.78412 0.563746 3.61554 0.643663 3.42771 0.71658C3.24221 0.799413 3.02754 0.855413 2.82804 0.988413C2.62737 1.11558 2.39579 1.22175 2.19162 1.39208C1.99387 1.56766 1.75529 1.71991 1.57912 1.94333C1.38662 2.15216 1.19646 2.3715 1.04887 2.62116C0.877957 2.85916 0.761873 3.1205 0.639373 3.37891C0.52854 3.63733 0.43929 3.90158 0.366373 4.15825C0.228123 4.67275 0.16629 5.16158 0.142373 5.57983C0.12254 5.99866 0.134207 6.34691 0.158707 6.59891C0.167457 6.71791 0.18379 6.83341 0.195457 6.91333L0.21004 7.01133L0.225207 7.00783C0.328959 7.49248 0.567801 7.93786 0.914102 8.29243C1.2604 8.64701 1.70001 8.89631 2.18208 9.01148C2.66415 9.12665 3.16897 9.10299 3.63815 8.94323C4.10733 8.78348 4.52169 8.49416 4.83331 8.10874C5.14493 7.72333 5.34107 7.25757 5.39903 6.76534C5.457 6.27311 5.37443 5.77452 5.16087 5.32726C4.94731 4.88 4.61149 4.50233 4.19225 4.23796C3.77302 3.97358 3.28751 3.8333 2.79187 3.83333V3.83333ZM9.20854 3.83333C9.07846 3.83333 8.95362 3.85316 8.82937 3.87125C8.86962 3.73591 8.91104 3.59825 8.97754 3.47458C9.04404 3.29491 9.14787 3.13916 9.25112 2.98225C9.33746 2.8125 9.48971 2.69758 9.60171 2.55233C9.71896 2.41116 9.87879 2.31725 10.0054 2.2C10.1296 2.0775 10.2924 2.01625 10.4219 1.92991C10.5572 1.85233 10.675 1.76658 10.801 1.72575L11.1155 1.59625L11.392 1.48133L11.109 0.35083L10.7608 0.43483C10.6494 0.46283 10.5135 0.495496 10.3589 0.53458C10.2008 0.563746 10.0322 0.643663 9.84437 0.71658C9.65946 0.799997 9.44421 0.855413 9.24471 0.988997C9.04404 1.11616 8.81246 1.22233 8.60829 1.39266C8.41054 1.56825 8.17196 1.7205 7.99579 1.94333C7.80329 2.15216 7.61312 2.3715 7.46554 2.62116C7.29462 2.85916 7.17854 3.1205 7.05604 3.37891C6.94521 3.63733 6.85596 3.90158 6.78304 4.15825C6.64479 4.67275 6.58296 5.16158 6.55904 5.57983C6.53921 5.99866 6.55087 6.34691 6.57537 6.59891C6.58412 6.71791 6.60046 6.83341 6.61212 6.91333L6.62671 7.01133L6.64187 7.00783C6.74563 7.49248 6.98447 7.93786 7.33077 8.29243C7.67707 8.64701 8.11668 8.89631 8.59875 9.01148C9.08081 9.12665 9.58563 9.10299 10.0548 8.94323C10.524 8.78348 10.9384 8.49416 11.25 8.10874C11.5616 7.72333 11.7577 7.25757 11.8157 6.76534C11.8737 6.27311 11.7911 5.77452 11.5775 5.32726C11.364 4.88 11.0282 4.50233 10.6089 4.23796C10.1897 3.97358 9.70417 3.8333 9.20854 3.83333V3.83333Z"
+                          class="fill-emerald-50"
+                        />
+                      </svg>
+                      <p class="text-white text-[19px] font-Josefin lg:text-[31px]">
+                        The world’s a big, big stage for this notorious deli smack
+                        in the middle of the theatre district, infamously famous for
+                        its over-the-top corned beef and pastrami sandwiches,
+                        chopped liver, blintzes, celebrities, salami, smoked fish
+                        and New York’s finest cheesecake.
+                      </p>
+                      <div class="flex items-center justify-center">
+                        <p
+                          class="text-white text-[19px] font-[700] font-Josefin lg:text-[31px]"
+                        >
+                          Anthony Reed,
+                        </p>
+                        <span
+                          class="text-white text-[19px] font-Josefin lg:text-[31px]"
+                          >New York</span
+                        >
+                      </div>
+                    </blockquote>
+                  </figure>
+                </div>
+              </div>
+              <!-- End Testimonial -->
+            </div>
+          </li>
+        </ul>
+        </div>
+        <!-- Indicators -->
+        <div class="flex items-center justify-center w-full gap-2 pt-6" data-glide-el="controls[nav]">
+            <button class="p-4 group" data-glide-dir="=0" aria-label="goto slide 1"><span class="block w-2 h-2 transition-colors duration-300 rounded-full opacity-70 ring-1 ring-slate-700 bg-white/20 focus:outline-none"></span></button>
+            <button class="p-4 group" data-glide-dir="=1" aria-label="goto slide 2"><span class="block w-2 h-2 transition-colors duration-300 rounded-full opacity-70 ring-1 ring-slate-700 bg-white/20 focus:outline-none"></span></button>
+            <button class="p-4 group" data-glide-dir="=2" aria-label="goto slide 3"><span class="block w-2 h-2 transition-colors duration-300 rounded-full opacity-70 ring-1 ring-slate-700 bg-white/20 focus:outline-none"></span></button>
+        </div>
+    </div>
+    
+
+    
+    </section>
+    <!-- trusted sec end -->
+    <!-- instagram start  -->
+    <section class="instagram-sec  my-20">
+      <div class="flex flex-col  items-center gap-3 mb-12 max-w-[1340px] mx-auto">
+        <h2 class="h2">INSTAGRAM</h2>
+        <small class="small text-[#777] borderline"
+          >We love posting photos of our coustomers having a good time</small
+        >
+      </div>
+      <div class="bg-[#f7f3f4]  py-10 flex flex-col items-center gap-5">
+      <!-- <div class=" max-w-[1340px] mx-auto flex flex-col items-center gap-2 lg:flex-row lg:gap-12">
+        <h1 class="text-[45px] font-extralight font-Raleway text-[#4b4741]">SUBSCRIBE</h1>
+        <small class="small text-[#777] "
+          >Get updates about new dishes and upcoming events</small
+        >
+      </div>
+
+       <form action=""
+       class="flex items-center lg:justify-end justify-center gap-7 mx-36 lg:mx-0 ">
+          <input
+            type="email"
+            placeholder="Your Email Address"
+            class="py-2 px-4 border-2 border-[#f9c56a] "
+          />
+          <button data-aos="fade-right">
+            <i class="bx bx-chevron-right text-[60px] px-1 bg-[#f9c56a]"></i>
+          </button>
+        </div>
+
+      </div> -->
+    </section>
+    <!-- instagram end -->
+     </main>
+     <!-- footer start -->
+      <footer >
+        <div class="footer pt-12 px-5  flex flex-col items-start gap-7 lg:gap-20 lg:grid lg:grid-cols-2 xl:grid-cols-3   max-w-[1340px] mx-auto "
+        data-aos="fade-up"
+       data-aos-duration="3000">
+        <div class="about xl:col-end-1 max-w-[1340px] mx-auto flex flex-col items-start justify-center gap-5">
+          <h2 class="text-[22px] font-semibold lg:text-[32px] text-[#f9c56a] font-Raleway">ABOUT US</h2>
+          <p class="text-white font-Josefin text-[20px] lg:text-22px text-left leading-9">Duis leo justo, condimentum at purus eu,Aenean sed dolor sem. Etiam massa libero, auctor vitae egestas et, accumsan quis nunc.Duis leo justo, condimentum at purus eu, posuere pretium tellus.</p>
+          <a href="#" class="text-[#f9c56a] text-[16px] font-Josefin">Read More ⇾</a>
+        </div>
+        <!-- recent post -->
+        <div class="max-w-[1340px]   flex flex-col items-start justify-start gap-5 lg:gap-7 mx-0">
+          <h2 class="text-[22px] font-semibold lg:text-[32px] text-[#f9c56a] font-Raleway">RECENT POST</h2>
+          <div class="flex items-center justify-start gap-4">
+            <img src="img/thumb8.png" alt="">
+            <div class="flex flex-col justify-start items-start text-left gap-3">
+            <a href="#" class="font-semibold text-[17px] text-white ">Hand picked ingredients for our best customers</a>
+            <p class="text-[#828281] text-[14px] font-semibold">29 may 2015</p>
+          </div>
+          </div>
+          <div class="flex items-center justify-start gap-4">
+            <img src="img/thumb9.png" alt="">
+            <div class="flex flex-col justify-center items-start gap-3 text-left">
+            <a href="#" class="font-semibold text-[17px] text-white ">Daily special foods that you will going to love</a>
+            <p class="text-[#828281] text-[14px] font-semibold">29 may 2015</p>
+          </div>
+          </div>
+        </div>
+        <!-- reach -->
+        <div class="max-w-[1340px] relative   flex flex-col items-start justify-center gap-6 lg:gap-10">
+          <h2 class="text-[22px] font-semibold lg:text-[32px] text-[#f9c56a] font-Raleway max-w-[1340px] ">REACH US</h2>
+          <div class=" reach-icon bg-[#343434] border-8 border-[#0000005e] flex items-center justify-start   text-white text-[22px] ">
+            <a href="https://www.facebook.com/mdraseltalukder0/"><i class='bx bxl-facebook-square px-3 py-4'></i></a>
+            <a href="https://x.com/mdraseltalukdr"><i class='bx bxl-twitter  px-3 py-4' ></i></a>
+            <a href="https://www.instagram.com/mdraseltalukdrr/"><i class='bx bxl-instagram-alt  px-3 py-4' ></i></a>
+            <a href="https://www.linkedin.com/in/md-rasel-talukderbd/"><i class='bx bxl-linkedin  px-3 py-4' ></i></a>
+            <a href="https://www.pinterest.com/mdraseltalukdrr/"><i class='bx bxl-pinterest-alt  px-3 py-4' ></i></a>
+          </div>
+          <!-- reach us -->
+          <div class="flex flex-col gap-2 lg:gap-5">
+            <div class="flex items-center justify-start gap-3">
+            <span><i class="fa-solid fa-location-dot text-[#f9c56a] text-[20px]"></i></span>
+            <p class="text-[#bcbcbc] text-[20px] font-Josefin">28 Seventh Avenue, Neew York, 10014</p>
+          </div>
+            <div class="flex items-center justify-start gap-3">
+            <span><i class="fa-solid fa-phone text-[#f9c56a] text-[20px]"></i></span>
+            <p class="text-[#bcbcbc] text-[20px] font-Josefin">Phone: (415) 124-5678</p>
+          </div>
+            <div class="flex items-center justify-start gap-3">
+            <span><i class="fa-solid fa-envelope text-[#f9c56a] text-[20px]"></i></span>
+            <p class="text-[#bcbcbc] text-[20px] font-Josefin">support@restaurant.com</p>
+          </div>
+          </div>
+        </div>
+        </div>
+       
+      </footer>
+      <div class="bg-[#1c1c1e] py-7 "
+    >
+        <div class="max-w-[1340px] mx-auto"
+        >
+        <p class="text-[#b5b5b4] text-[20px] lg:text-[22px] font-Josefin"> ©2015.Tomato.All rights reserved. Designed with💛by Md Rasel</p>
+      </div>
+    </div>
+      
+     <!-- footer end -->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script src="java.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+     <!-- script -->
+      <script>
+      AOS.init({
+    duration: 2000,
+  });
+
+</script>
+
+  <script>
+    var glide07 = new Glide('.glide-08', {
+        type: 'slider',
+        focusAt: 'center',
+        perView: 1,
+        autoplay: 3500,
+        animationDuration: 700,
+        gap: 0,
+        classes: {
+            activeNav: '[&>*]:bg-slate-700',
+        },
+    });
+
+    glide07.mount();
+</script>
+  </body>
+</html>
+

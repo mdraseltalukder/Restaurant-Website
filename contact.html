@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="img/restaurantfavicon1.webp"
+      type="image/x-icon"
+    />
+    <title>CONTACT</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="m-0 p-0 text-center">
+    <style>
+      .header-sec {
+        background-image: url(./img/1.jpg);
+        width: 100%;
+        height: 60vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+      }
+      .slider-sec {
+        background-image: url(./img/bg3.png);
+        width: 100%;
+        height: 70vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .feature-sec {
+        background: url(img/bg4.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        background-position: top;
+        backdrop-filter: blur(1rem);
+      }
+      .menu p {
+        position: relative;
+      }
+      .menu p::before {
+        content: "";
+        height: 4px;
+        width: 20%;
+        background: #f9c56a;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .borderline {
+        position: relative;
+      }
+      .borderline::before {
+        content: "";
+        height: 3px;
+        width: 20%;
+        background: #f9c56a;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .menu-links a {
+        position: relative;
+      }
+      .menu-links a::before {
+        content: "";
+        height: 0;
+        width: 0;
+        background: #f9c56a;
+        position: absolute;
+        bottom: -2px;
+        display: none;
+      }
+      .menu-links a:hover::before {
+        height: 3px;
+        width: 100%;
+        display: flex;
+        animation: menu-links-a 0.5s linear;
+      }
+      @keyframes menu-links-a {
+        0% {
+          width: 0%;
+        }
+
+        50%,
+        100% {
+          width: 100%;
+        }
+      }
+      .slider-bg {
+        background-image: url(img/bg5.png);
+        height: 50vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .scroll-smooth {
+        scrollbar-width: none;
+      }
+      footer {
+        background-image: url(img/bg6.png);
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .reach-icon a:hover {
+        background-color: #f9c56a;
+        color: black;
+      }
+      .footer {
+        display: grid;
+      }
+      .follow-icon a {
+        font-size: 20px;
+
+        display: inline-block;
+        background: black;
+        color: white;
+        border-radius: 50%;
+      }
+      .follow-icon a:hover {
+        color: #f9c56a;
+      }
+      @media (max-width: 500px) {
+        h2 {
+          font-size: 20px !important;
+        }
+        p {
+          font-size: 16px !important;
+        }
+        a {
+          font-size: 16px !important;
+        }
+        footer {
+          height: 110vh;
+          .footer {
+            padding-bottom: 20px;
+          }
+        }
+      }
+      @media (min-width: 1024px) {
+        .slider-bg {
+          height: 60vh;
+        }
+        footer {
+          height: 80vh;
+        }
+
+        .about {
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+        .header-sec{
+          height: 50vh;
+        }
+      }
+      @media (min-width: 1280px) {
+        .about {
+          grid-column-start: 1;
+          grid-column-end: 2;
+        }
+        .footer {
+          padding-bottom: 30px;
+        }
+        footer {
+          height: 50vh;
+        }
+      }
+    </style>
+    <!-- header-sec start  -->
+    <header class="header-sec w-full mx-auto relative overflow-hidden ">
+      <!-- navbar -->
+      <div class="bg-black bg-opacity-40 fixed w-full">
+        <div
+          class="nav flex items-center max-w-[1340px] m-auto justify-between px-7 py-5 lg:py-9 relative"
+          data-aos="zoom-in-down"
+        >
+        <a href="contact.html" class="cursor-pointer text-white text-h2 font-Josefin" 
+        > Tasty Delights
+       </a>
+          <!-- mobile menu -->
+          <a href=""
+            ><i class="fa-solid fa-bars text-[20px] text-white hidden"></i
+          ></a>
+          <!-- mobile-menu -->
+          <div
+            class="mobile-menu flex flex-col items-start justify-center text-white font-Raleway absolute top-[100%] left-[-100%] gap-7 bg-black w-full bg-opacity-40 pb-7 pl-7 xl:hidden text-[20px] pt-10"
+            id="mobile-menu"
+          >
+          <a href="index.html">HOME▾ </a>
+          <!-- <a href="shop.html">SHOP▾</a> -->
+          <a href="#">MENU▾</a>
+          <a href="#">RESERVATION▾</a>
+          <a href="#">RECIPE▾</a>
+          <a href="#">BLOG▾</a>
+          <a href="about.html">ABOUT▾</a>
+          <a href="contact.html">CONTACT▾</a>
+
+          
+          </div>
+          <div class="flex items-center justify-end">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="open-menu xl:hidden w-[35px] text-white"
+              id="open-menu"
+            >
+              <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="close-menu hidden xl:hidden w-[35px] text-white"
+              id="close-menu"
+            >
+              <path
+                d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"
+              ></path>
+            </svg>
+          </div>
+
+          <!-- menu -->
+
+          <div
+            class="nav-items text-white text-a lg:text-[20px] items-center justify-between gap-8 hidden xl:flex"
+            id="menu"
+          >
+          <a href="index.html">HOME▾ </a>
+          <a  class="font-extrabold 
+          text-[#f9c56a]" href="contact.html">CONTACT▾</a>
+          <!-- <a href="shop.html">SHOP▾</a> -->
+          <a href="#">MENU▾</a>
+          <a href="#">RESERVATION▾</a>
+          <a href="#">RECIPE▾</a>
+          <a href="#">BLOG▾</a>
+          <a href="about.html">ABOUT▾</a>
+          
+
+
+            <!-- <div>
+              <a
+                ><i
+                  class="fa-solid fa-cart-shopping text-white text-[16px] cursor-pointer hover:text-[#f9c56a] duration-500"
+                ></i
+              ></a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- header -->
+      <div
+        class="header flex flex-col items-center gap-3 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[1340px] "
+      >
+        <h2
+          class="font-Raleway font-extrabold text-white text-h1 lg:text-[68px]"
+        >
+          CONTACT
+        </h2>
+        <h2
+          class="font-Raleway  text-[#bdbdbd] text-[24px] lg:text-[32px] w-full"
+        >
+          Tomato&nbspis&nbspa&nbspdelicious&nbsprestaurant&nbspwebsite&nbsptemplate
+        </h2>
+      </div>
+     
+    </header>
+    <!-- header-sec end  -->
+    <!-- address start  -->
+    <section
+      class="address-sec max-w-[1340px] mx-auto px-5 flex flex-col gap-10 py-16 lg:grid lg:grid-cols-2 "
+      data-aos="zoom-in-up"
+    >
+      <div class="px-5 flex flex-col gap-10">
+        <div class="address flex flex-col items-start gap-5 justify-center">
+          <h2 class="text-[22px] text-black font-Raleway font-semibold">
+            ADDRESS
+          </h2>
+          <div class="flex flex-col gap-2 lg:gap-5">
+            <div class="flex items-center justify-start gap-3">
+              <span
+                ><i
+                  class="fa-solid fa-location-dot text-[#f9c56a] text-[20px]"
+                ></i
+              ></span>
+              <p class="text-black text-[20px] font-Josefin">
+                28 Seventh Avenue, Neew York, 10014
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-3">
+              <span
+                ><i class="fa-solid fa-phone text-[#f9c56a] text-[20px]"></i
+              ></span>
+              <p class="text-[#000] text-[20px] font-Josefin">
+                Phone: (415) 124-5678
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-3">
+              <span
+                ><i class="fa-solid fa-envelope text-[#f9c56a] text-[20px]"></i
+              ></span>
+              <p class="text-[#000] text-[20px] font-Josefin">
+                support@restaurant.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- wowwrking hour -->
+        <div class="flex flex-col gap-10">
+          <div class="flex flex-col gap-5 items-start justify-center">
+            <h2 class="text-[22px] text-black font-Raleway font-semibold">
+              WORKING HOURS
+            </h2>
+            <div class="flex flex-col items-start justify-center gap-4">
+              <p class="text-black text-[20px] font-Josefin">
+                10:00 am to 11:00 pm on Weekdays
+              </p>
+              <p class="text-black text-[20px] font-Josefin">
+                11:00 am to 11:30 pm on Weekends
+              </p>
+            </div>
+          </div>
+          <!-- follow -->
+          <div class="flex flex-col items-start justify-center gap-5">
+            <h2 class="text-[22px] text-black font-Raleway font-semibold">
+              FOLLOW US
+            </h2>
+            <div class="follow-icon flex items-start gap-2">
+              <a href="https://www.facebook.com/mdraseltalukder0/"><i class='bx bxl-facebook-square px-3 py-4'></i></a>
+            <a href="https://x.com/mdraseltalukdr"><i class='bx bxl-twitter  px-3 py-4' ></i></a>
+            <a href="https://www.instagram.com/mdraseltalukdrr/"><i class='bx bxl-instagram-alt  px-3 py-4' ></i></a>
+            <a href="https://www.linkedin.com/in/md-rasel-talukderbd/"><i class='bx bxl-linkedin  px-3 py-4' ></i></a>
+            <a href="https://www.pinterest.com/mdraseltalukdrr/"><i class='bx bxl-pinterest-alt  px-3 py-4' ></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- form  -->
+      <form
+        action="
+       "
+      >
+        <fieldset class="flex flex-col gap-4">
+          <input type="text" name="" id="" placeholder="Full Name" />
+          <input type="email" name="" id="" placeholder="Email Address" />
+          <input type="text" name="" id="" placeholder="Subject" />
+          <textarea
+            class="bg-[#f3f1ed] pl-2 text[18px]"
+            name=""
+            id=""
+            rows="6"
+            placeholder=" Massage"
+          ></textarea>
+          <button
+            class="text-[#333] font-semibold bg-[#f9c56a] font-Raleway text-[18px] py-3"
+          >
+            SEND MASSAGE
+          </button>
+        </fieldset>
+      </form>
+    </section>
+    <!-- address end -->
+    <!-- map-scc  -->
+    <!-- <div class="  py-16 flex flex-col items-center gap-5">
+      <div class=" max-w-[1340px] mx-auto flex flex-col items-center gap-2 lg:flex-row lg:gap-12">
+        <h1 class="text-[45px] font-extralight font-Raleway text-[#4b4741]">SUBSCRIBE</h1>
+        <small class="small text-[#777] "
+          >Get updates about new dishes and upcoming events</small
+        >
+      </div>
+
+       <form   action="https://formspree.io/f/mldglbkp"
+       method="POST"
+       class="flex items-center lg:justify-end justify-center gap-7 mx-36 lg:mx-0 ">
+          <input
+            type="email"
+            placeholder="Your Email Address"
+            class="py-2 px-4 border-2 border-[#f9c56a] "
+          />
+          <button data-aos="fade-right">
+            <i class="bx bx-chevron-right text-[60px] px-1 bg-[#f9c56a]"></i>
+          </button>
+        </div> -->
+    <!-- footer start -->
+    <footer>
+      <div
+        class="footer pt-12 px-5 flex flex-col items-start gap-7 lg:gap-20 lg:grid lg:grid-cols-2 xl:grid-cols-3 max-w-[1340px] mx-auto"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
+        <div
+          class="about xl:col-end-1 max-w-[1340px] mx-auto flex flex-col items-start justify-center gap-5"
+        >
+          <h2
+            class="text-[22px] font-semibold lg:text-[32px] text-[#f9c56a] font-Raleway"
+          >
+            ABOUT US
+          </h2>
+          <p
+            class="text-white font-Josefin text-[20px] lg:text-22px text-left leading-9"
+          >
+            Duis leo justo, condimentum at purus eu,Aenean sed dolor sem. Etiam
+            massa libero, auctor vitae egestas et, accumsan quis nunc.Duis leo
+            justo, condimentum at purus eu, posuere pretium tellus.
+          </p>
+          <a href="#" class="text-[#f9c56a] text-[16px] font-Josefin"
+            >Read More ⇾</a
+          >
+        </div>
+        <!-- recent post -->
+        <div
+          class="max-w-[1340px] flex flex-col items-start justify-start gap-5 lg:gap-7 mx-0"
+        >
+          <h2
+            class="text-[22px] font-semibold lg:text-[32px] text-[#f9c56a] font-Raleway"
+          >
+            RECENT POST
+          </h2>
+          <div class="flex items-center justify-start gap-4">
+            <img src="img/thumb8.png" alt="" />
+            <div
+              class="flex flex-col justify-start items-start text-left gap-3"
+            >
+              <a href="#" class="font-semibold text-[17px] text-white"
+                >Hand picked ingredients for our best customers</a
+              >
+              <p class="text-[#828281] text-[14px] font-semibold">
+                29 may 2015
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center justify-start gap-4">
+            <img src="img/thumb9.png" alt="" />
+            <div
+              class="flex flex-col justify-center items-start gap-3 text-left"
+            >
+              <a href="#" class="font-semibold text-[17px] text-white"
+                >Daily special foods that you will going to love</a
+              >
+              <p class="text-[#828281] text-[14px] font-semibold">
+                29 may 2015
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- reach -->
+        <div
+          class="max-w-[1340px] relative flex flex-col items-start justify-center gap-6 lg:gap-10"
+        >
+          <h2
+            class="text-[22px] font-semibold lg:text-[32px] text-[#f9c56a] font-Raleway max-w-[1340px]"
+          >
+            REACH US
+          </h2>
+          <div
+            class="reach-icon bg-[#343434] border-8 border-[#0000005e] flex items-center justify-start text-white text-[22px]"
+          >
+          <a href="https://www.facebook.com/mdraseltalukder0/"><i class='bx bxl-facebook-square px-3 py-4'></i></a>
+          <a href="https://x.com/mdraseltalukdr"><i class='bx bxl-twitter  px-3 py-4' ></i></a>
+          <a href="https://www.instagram.com/mdraseltalukdrr/"><i class='bx bxl-instagram-alt  px-3 py-4' ></i></a>
+          <a href="https://www.linkedin.com/in/md-rasel-talukderbd/"><i class='bx bxl-linkedin  px-3 py-4' ></i></a>
+          <a href="https://www.pinterest.com/mdraseltalukdrr/"><i class='bx bxl-pinterest-alt  px-3 py-4' ></i></a>
+          </div>
+          <!-- reach us -->
+          <div class="flex flex-col gap-2 lg:gap-5">
+            <div class="flex items-center justify-start gap-3">
+              <span
+                ><i
+                  class="fa-solid fa-location-dot text-[#f9c56a] text-[20px]"
+                ></i
+              ></span>
+              <p class="text-[#bcbcbc] text-[20px] font-Josefin">
+                28 Seventh Avenue, Neew York, 10014
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-3">
+              <span
+                ><i class="fa-solid fa-phone text-[#f9c56a] text-[20px]"></i
+              ></span>
+              <p class="text-[#bcbcbc] text-[20px] font-Josefin">
+                Phone: (415) 124-5678
+              </p>
+            </div>
+            <div class="flex items-center justify-start gap-3">
+              <span
+                ><i class="fa-solid fa-envelope text-[#f9c56a] text-[20px]"></i
+              ></span>
+              <p class="text-[#bcbcbc] text-[20px] font-Josefin">
+                support@restaurant.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="bg-[#1c1c1e] py-7"
+    >
+      <div class="max-w-[1340px] mx-auto">
+        <p class="text-[#b5b5b4] text-[20px] lg:text-[22px] font-Josefin">
+          ©2015.Tomato.All rights reserved. Designed with💛by Md Rasel
+        </p>
+      </div>
+    </div>
+    <!-- footer end -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="java.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+    <script>
+      AOS.init({
+    duration: 2000,
+  });
+
+
+      </script>
+  </body>
+</html>

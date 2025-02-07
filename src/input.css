@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Josefin ";
+  src: url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+  font-family: "Raleway";
+  src: url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+}
+
+@layer components {
+  .nav-items a,
+  .mobile-menu a {
+    @apply hover:text-[#f9c56a] text-[#ececec] duration-500;
+  }
+
+  form input,
+  form textarea {
+    @apply hover:border-2 hover:border-[#f28a2f] py-2 w-full bg-[rgb(243,241,237)] text-[18px] pl-3;
+  }
+  form span i {
+    @apply text-[#f28a2f];
+  }
+  .menu-links a {
+    @apply font-Raleway font-semibold  text-[#828281] text-[16px] hover:text-[#000];
+  }
+  .h2 {
+    @apply text-h2 lg:text-h1 font-Raleway font-semibold lg:font-extrabold;
+  }
+  .small {
+    @apply text-[22px] font-Josefin font-[400];
+  }
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(58%) sepia(82%) saturate(637%) hue-rotate(3deg);
+  cursor: pointer;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(58%) sepia(82%) saturate(637%) hue-rotate(3deg);
+  cursor: pointer;
+}
