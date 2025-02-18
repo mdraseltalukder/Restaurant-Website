@@ -31,6 +31,7 @@
   .small {
     @apply text-[22px] font-Josefin font-[400];
   }
+  
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(58%) sepia(82%) saturate(637%) hue-rotate(3deg);

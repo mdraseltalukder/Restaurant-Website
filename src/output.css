@@ -1460,6 +1460,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     line-height: 1.2;
   }
 
+  .lg\:text-\[56px\] {
+    font-size: 56px;
+  }
+
   .lg\:font-extrabold {
     font-weight: 800;
   }
